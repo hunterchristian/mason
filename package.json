@@ -1,0 +1,26 @@
+{
+  "name": "mason",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/tsc -w",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunterchristian/mason.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunterchristian/mason/issues"
+  },
+  "homepage": "https://github.com/hunterchristian/mason#readme",
+  "dependencies": {
+    "@types/node": "^12.11.1",
+    "typescript": "^3.6.4"
+  }
+}
