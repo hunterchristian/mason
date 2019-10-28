@@ -23,7 +23,7 @@
   "homepage": "https://github.com/hunterchristian/mason#readme",
   "dependencies": {
     "@types/jest": "^24.0.20",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.11.7",
     "big.js": "^5.2.2",
     "typescript": "^3.6.4"
   },

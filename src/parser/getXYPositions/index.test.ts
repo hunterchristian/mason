@@ -1,5 +1,5 @@
-const getXYPositions = require('./index');
-const { testEntity } = require('../../util/testEntities');
+import getXYPositions from './index';
+import { testEntity } from '../../util/testEntities';
 
 describe('getXYPositions', () => {
   test('should return Y positions', () => {
@@ -11,9 +11,12 @@ describe('getXYPositions', () => {
     };
     const actualValue = yPositionGenerator.next().value;
 
-    expect(actualValue.startPositionValue).toBe(expectedValue.startPositionValue);
-    expect(actualValue.endPositionValue).toBe(expectedValue.endPositionValue);
-    expect(actualValue.position).toBe(expectedValue.position);
+    expect(actualValue).toBeDefined();
+    if (actualValue) {
+      expect(actualValue.startPositionValue).toBe(expectedValue.startPositionValue);
+      expect(actualValue.endPositionValue).toBe(expectedValue.endPositionValue);
+      expect(actualValue.position).toBe(expectedValue.position);
+    }
   });
   
   test('should return X positions', () => {
@@ -25,10 +28,11 @@ describe('getXYPositions', () => {
     };
     const actualValue = xPositionGenerator.next().value;
     
-    expect(actualValue.startPositionValue).toBe(expectedValue.startPositionValue);
-    expect(actualValue.endPositionValue).toBe(expectedValue.endPositionValue);
-    expect(actualValue.position).toBe(expectedValue.position);
+    expect(actualValue).toBeDefined();
+    if (actualValue) {
+      expect(actualValue.startPositionValue).toBe(expectedValue.startPositionValue);
+      expect(actualValue.endPositionValue).toBe(expectedValue.endPositionValue);
+      expect(actualValue.position).toBe(expectedValue.position);
+    }
   });
 });
-
-export {}

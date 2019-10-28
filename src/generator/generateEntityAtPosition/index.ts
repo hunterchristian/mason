@@ -1,5 +1,5 @@
-const fs = require('fs');
-const Big = require('big.js');
+import * as fs from 'fs';
+import Big from 'big.js';
 
 const POSITION_TEMPLATE_START_TAG = '{{ ';
 const POSITION_TEMPLATE_END_TAG = ' }}';
@@ -46,6 +46,4 @@ function generateEntityAtPosition(entityName: string, xPosition: number, yPositi
   return entityDxfPartialWithXYReplaced;
 }
 
-module.exports = generateEntityAtPosition;
-
-export {}
+export default generateEntityAtPosition;

@@ -1,15 +1,15 @@
-const getXYPositions = require('../getXYPositions');
-const insertTemplatesInPlaceOfXYPositions = require('./index');
-const {
+import getXYPositions from '../getXYPositions';
+import insertTemplatesInPlaceOfXYPositions from './index';
+import {
   testEntity,
   expectedYPosEntity,
   expectedXPosEntity,
   expectedXYPosEntity
-} = require('../../util/testEntities');
+} from '../../util/testEntities';
 
 describe('insertTemplatesInPlaceOfXYPositions', () => {
   test('should insert template for Y positions', () => {
-    let MIN_Y_POSITION = 3.0;
+    let MIN_Y_POSITION = '3.0';
     const yPositionGenerator = getXYPositions(testEntity, 'Y');
     let dxfEntityWithYTemplates = insertTemplatesInPlaceOfXYPositions(
       testEntity,
@@ -21,7 +21,7 @@ describe('insertTemplatesInPlaceOfXYPositions', () => {
     expect(dxfEntityWithYTemplates).toBe(expectedYPosEntity);
   });
   test('should insert template for X positions', () => {
-    let MIN_X_POSITION = 0.0;
+    let MIN_X_POSITION = '0.0';
     const xPositionGenerator = getXYPositions(testEntity, 'X');
     let dxfEntityWithXTemplates = insertTemplatesInPlaceOfXYPositions(
       testEntity,
@@ -33,7 +33,7 @@ describe('insertTemplatesInPlaceOfXYPositions', () => {
     expect(dxfEntityWithXTemplates).toBe(expectedXPosEntity);
   });
   test('should insert templates for X and Y positions', () => {
-    let MIN_X_POSITION = 0.0;
+    let MIN_X_POSITION = '0.0';
     const xPositionGenerator = getXYPositions(testEntity, 'X');
     let dxfEntityWithXTemplates = insertTemplatesInPlaceOfXYPositions(
       testEntity,
@@ -41,7 +41,7 @@ describe('insertTemplatesInPlaceOfXYPositions', () => {
       MIN_X_POSITION,
       'xPosition'
     );
-    let MIN_Y_POSITION = 3.0;
+    let MIN_Y_POSITION = '3.0';
     const yPositionGenerator = getXYPositions(dxfEntityWithXTemplates, 'Y');
     let dxfEntityWithXYTemplates = insertTemplatesInPlaceOfXYPositions(
       dxfEntityWithXTemplates,

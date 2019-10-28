@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs';
 const getXYPositions = require('./getXYPositions');
 const insertTemplatesInPlaceOfXYPositions = require('./insertTemplatesInPlaceOfXYPositions');
 
@@ -22,5 +22,3 @@ let dxfEntityWithXYTemplates = insertTemplatesInPlaceOfXYPositions(
 );
 
 fs.writeFileSync('./dxf-partials/entities/A.dxf.partial', dxfEntityWithXYTemplates, { encoding: 'utf-8' });
-
-export {}

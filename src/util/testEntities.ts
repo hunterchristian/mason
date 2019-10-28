@@ -1,5 +1,4 @@
-function getTestEntities() {
-  const testEntity = `
+export const testEntity = `
   0
 SECTION
   2
@@ -102,7 +101,7 @@ AcDbSpline
      8
 `;
 
-const expectedYPosEntity = `
+export const expectedYPosEntity = `
   0
 SECTION
   2
@@ -205,7 +204,7 @@ AcDbSpline
      8
 `;
 
-const expectedXPosEntity = `
+export const expectedXPosEntity = `
   0
 SECTION
   2
@@ -308,7 +307,7 @@ AcDbSpline
      8
 `;
 
-const expectedXYPosEntity = `
+export const expectedXYPosEntity = `
   0
 SECTION
   2
@@ -411,7 +410,7 @@ AcDbSpline
      8
 `;
 
-const expectedXYPosEntityReplacement = `
+export const expectedXYPosEntityReplacement = `
   0
 SECTION
   2
@@ -513,14 +512,3 @@ AcDbSpline
  70
      8
 `;
-
-  return {
-    testEntity,
-    expectedYPosEntity,
-    expectedXPosEntity,
-    expectedXYPosEntity,
-    expectedXYPosEntityReplacement
-  };
-}
-
-module.exports = getTestEntities();

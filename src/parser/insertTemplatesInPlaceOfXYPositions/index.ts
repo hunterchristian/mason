@@ -1,4 +1,4 @@
-const Big = require('big.js');
+import Big from 'big.js';
 
 function insertTemplatesInPlaceOfXYPositions(rawDxfEntity: string, generator, minPosition: string, positionTag: string) {
   let dxfEntityWithTemplates = rawDxfEntity;
@@ -32,6 +32,4 @@ function insertTemplatesInPlaceOfXYPositions(rawDxfEntity: string, generator, mi
   return dxfEntityWithTemplates;
 }
 
-module.exports = insertTemplatesInPlaceOfXYPositions;
-
-export {}
+export default insertTemplatesInPlaceOfXYPositions;

@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
 const generateEntityAtPosition = require('./generateEntityAtPosition');
 
@@ -29,5 +29,3 @@ ${ objectsDxfPartial }
 ${ eofDxfPartial }`;
 
 fs.writeFileSync('./generated.dxf', completeDxfFile, { encoding: 'utf-8' });
-
-export {}

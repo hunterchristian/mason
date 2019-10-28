@@ -1,8 +1,8 @@
-const generateEntityAtPosition = require('./index');
-const {
+import generateEntityAtPosition from './index';
+import {
   expectedXYPosEntity,
   expectedXYPosEntityReplacement
-} = require('../../util/testEntities');
+} from '../../util/testEntities';
 
 describe('generateEntityAtPosition', () => {
   test('should replace X and Y template values', () => {
@@ -10,5 +10,3 @@ describe('generateEntityAtPosition', () => {
     expect(actual).toBe(expectedXYPosEntityReplacement);
   });
 });
-
-export {}

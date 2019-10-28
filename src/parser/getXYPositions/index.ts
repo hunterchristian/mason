@@ -15,7 +15,7 @@ function getPositionCodeForPosition(position: string) {
   return positionCode;
 }
 
-module.exports = function* (dxfEntity: string, position: string) {
+export default function* getXYPositions(dxfEntity: string, position: string) {
   const positionCode = getPositionCodeForPosition(position);
   let nextIndex = dxfEntity.indexOf(positionCode);
   while(nextIndex !== -1) {
@@ -31,5 +31,3 @@ module.exports = function* (dxfEntity: string, position: string) {
     };
   }
 };
-
-export {}
