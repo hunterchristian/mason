@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const generateEntityAtPosition = require('./util/generateEntityAtPosition/index');
+const generateEntityAtPosition = require('./generateEntityAtPosition');
 
 const readDxfPartial = partialName =>
   fs.readFileSync(`./dxf-partials/${ partialName }.dxf.partial`, { encoding: 'utf-8' });
@@ -28,6 +28,6 @@ ENDSEC
 ${ objectsDxfPartial }
 ${ eofDxfPartial }`;
 
-fs.writeFileSync('./out.dxf', completeDxfFile, { encoding: 'utf-8' });
+fs.writeFileSync('./generated.dxf', completeDxfFile, { encoding: 'utf-8' });
 
 export {}

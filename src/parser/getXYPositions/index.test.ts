@@ -1,5 +1,5 @@
 const getXYPositions = require('./index');
-const { testEntity } = require('../testEntities');
+const { testEntity } = require('../../util/testEntities');
 
 describe('getXYPositions', () => {
   test('should return Y positions', () => {

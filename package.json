@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest build/",
     "watch": "./node_modules/.bin/tsc -w",
-    "build": "./node_modules/.bin/tsc",
-    "createDXFTemplates": "node ./build/util/createTemplatesForXYPositions",
-    "start": "node build/index.js"
+    "build": "rm -rf build/ && ./node_modules/.bin/tsc",
+    "generate": "node build/generator/index.js",
+    "parse": "node build/parser/index.js"
   },
   "repository": {
     "type": "git",

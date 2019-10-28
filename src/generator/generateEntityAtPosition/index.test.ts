@@ -2,7 +2,7 @@ const generateEntityAtPosition = require('./index');
 const {
   expectedXYPosEntity,
   expectedXYPosEntityReplacement
-} = require('../testEntities');
+} = require('../../util/testEntities');
 
 describe('generateEntityAtPosition', () => {
   test('should replace X and Y template values', () => {

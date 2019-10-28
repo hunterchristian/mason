@@ -5,7 +5,7 @@ const {
   expectedYPosEntity,
   expectedXPosEntity,
   expectedXYPosEntity
-} = require('../testEntities');
+} = require('../../util/testEntities');
 
 describe('insertTemplatesInPlaceOfXYPositions', () => {
   test('should insert template for Y positions', () => {
