@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const generateEntityAtPosition = require('./util/generateEntityAtPosition');
+const generateEntityAtPosition = require('./util/generateEntityAtPosition/index');
 
 const readDxfPartial = partialName =>
   fs.readFileSync(`./dxf-partials/${ partialName }.dxf.partial`, { encoding: 'utf-8' });
@@ -17,7 +17,14 @@ let completeDxfFile =
 ${ classesDxfPartial }
 ${ tablesDxfPartial }
 ${ blocksDxfPartial }
-${ generateEntityAtPosition('A', 3.0, 3.0) }
+  0
+SECTION
+  2
+ENTITIES
+${ generateEntityAtPosition('A', 0.2, 3.0) }
+${ generateEntityAtPosition('A', 0.4, 3.0) }
+  0
+ENDSEC
 ${ objectsDxfPartial }
 ${ eofDxfPartial }`;
 

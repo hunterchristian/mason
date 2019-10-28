@@ -1,8 +1,4 @@
   0
-SECTION
-  2
-ENTITIES
-  0
 SPLINE
   5
 100
@@ -6932,5 +6928,3 @@ AcDbPolyline
 {{ xPosition:0.484971 }}
  20
 {{ yPosition:0.331062068884146 }}
-  0
-ENDSEC
