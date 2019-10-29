@@ -13,10 +13,22 @@ if (!entityName) {
   process.exit(1);
 }
 
-const dxfFileAsStr = fs.readFileSync(dxfFileToProcess, { encoding: 'utf-8'});
+let dxfFileAsStr;
+try {
+  dxfFileAsStr = fs.readFileSync(dxfFileToProcess, { encoding: 'utf-8'});
+} catch (err) {
+  console.error(err);
+  process.exit(1);
+}
 const entity = extractEntityFromFile(dxfFileAsStr);
-fs.writeFileSync(
-  `./dxf-partials/entities/${ entityName }.dxf.partial`,
-  entity,
-  { encoding: 'utf-8' }
-);
+
+try {
+  fs.writeFileSync(
+    `./dxf-partials/entities/${ entityName }.dxf.partial`,
+    entity,
+    { encoding: 'utf-8' }
+  );
+} catch (err) {
+  console.error(err);
+  process.exit(1);
+}

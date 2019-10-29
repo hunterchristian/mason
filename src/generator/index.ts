@@ -20,7 +20,8 @@ ${ blocksDxfPartial }
 SECTION
   2
 ENTITIES
-${ generateEntityAtPosition('AA', 0.2, 3.0) }
+${ generateEntityAtPosition('A', 0.0, 3.0) }
+${ generateEntityAtPosition('A', 0.4147779028, 3.0) }
   0
 ENDSEC
 ${ objectsDxfPartial }
