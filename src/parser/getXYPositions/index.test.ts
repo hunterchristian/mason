@@ -1,5 +1,5 @@
 import getXYPositions from './index';
-import { testEntity } from '../../util/testEntities';
+import { testEntity } from '../../util/testEntities/testEntity';
 
 describe('getXYPositions', () => {
   test('should return Y positions', () => {

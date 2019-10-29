@@ -1,8 +1,22 @@
-const fs = require('fs');
+import * as fs from 'fs';
+import extractEntityFromFile from './extractEntityFromFile';
 
-
-module.exports = function (dxfFilePath) {
-  const dxfFileAsStr = fs.readFileSync();
+const args = process.argv.slice(2);
+const dxfFileToProcess = args[0];
+if (!dxfFileToProcess) {
+  console.error('Must specify DXF file to be parsed as the first argument');
+  process.exit(1);
+}
+const entityName = args[1];
+if (!entityName) {
+  console.error('Must specify name of entity as the second argument');
+  process.exit(1);
 }
 
-export {}
+const dxfFileAsStr = fs.readFileSync(dxfFileToProcess, { encoding: 'utf-8'});
+const entity = extractEntityFromFile(dxfFileAsStr);
+fs.writeFileSync(
+  `./dxf-partials/entities/${ entityName }.dxf.partial`,
+  entity,
+  { encoding: 'utf-8' }
+);

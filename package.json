@@ -8,7 +8,8 @@
     "watch": "./node_modules/.bin/tsc -w",
     "build": "rm -rf build/ && ./node_modules/.bin/tsc",
     "generate": "node build/generator/index.js",
-    "parse": "node build/parser/index.js"
+    "parse": "node build/parser/index.js",
+    "extract": "node build/parser/extractEntity"
   },
   "repository": {
     "type": "git",

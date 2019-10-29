@@ -3,6 +3,6 @@
       "module": "commonjs",
       "target": "ES2018",
       "outDir": "build",
-      "rootDir": "src"
+      "rootDir": "src",
   }
 }

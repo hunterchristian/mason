@@ -2,7 +2,7 @@ import generateEntityAtPosition from './index';
 import {
   expectedXYPosEntity,
   expectedXYPosEntityReplacement
-} from '../../util/testEntities';
+} from '../../util/testEntities/testEntity';
 
 describe('generateEntityAtPosition', () => {
   test('should replace X and Y template values', () => {

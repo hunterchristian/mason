@@ -5,7 +5,7 @@ import {
   expectedYPosEntity,
   expectedXPosEntity,
   expectedXYPosEntity
-} from '../../util/testEntities';
+} from '../../util/testEntities/testEntity';
 
 describe('insertTemplatesInPlaceOfXYPositions', () => {
   test('should insert template for Y positions', () => {
